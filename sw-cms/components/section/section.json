@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_section_sections",
+  "info": {
+    "name": "Section",
+    "icon": "file-code"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "picture": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "accordion": {
+      "type": "component",
+      "repeatable": true,
+      "component": "accordion.accordion"
+    }
+  }
+}

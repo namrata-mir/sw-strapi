@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_career_card_career_cards",
+  "info": {
+    "name": "Career Card",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cardTitle": {
+      "type": "string",
+      "required": true
+    },
+    "cardDescription": {
+      "type": "richtext"
+    },
+    "cardImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

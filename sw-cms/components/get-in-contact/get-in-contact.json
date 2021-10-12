@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_get_in_contact_get_in_contacts",
+  "info": {
+    "name": "Get in contact",
+    "icon": "window-maximize"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

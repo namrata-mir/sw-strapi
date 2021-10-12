@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_get_in_contact_contacts",
+  "info": {
+    "name": "contact",
+    "icon": "audio-description",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
