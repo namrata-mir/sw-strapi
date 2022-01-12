@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  strapi:
+    build: .
+    container_name: sw-strapi
+    env_file: ./.env
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+    networks:
+      - strapi-app-network
+    ports:
+      - "1337:1337"
+
+  mongo:
+    image: mongo
+    container_name: sw-mongo
+    restart: unless-stopped
+    networks:
+      - strapi-app-network
+    ports:
+      - "27017:27017"
+networks:
+  strapi-app-network:
+    driver: bridge
