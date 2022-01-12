@@ -6,11 +6,11 @@ WORKDIR /app
 
 # Copy package.json to root directory inside Docker container of Strapi app
 
-COPY ./package.json .
+COPY ./sw-cms/package.json .
 
 # Copy yarn.lock to root directory inside Docker container of Strapi app
 
-COPY ./yarn.lock .
+COPY ./sw-cms/yarn.lock .
 
 # Install dependencies, but not generate a yarn.lock lockfile and fail if an update is needed.
 RUN yarn --version
@@ -29,17 +29,17 @@ RUN yarn install
 
 # ‘.’ or ‘/’ means the file will be put in the image root folder.
 
-COPY ./favicon.ico .
+COPY ./sw-cms/favicon.ico .
 
-COPY ./public/ public/
+COPY ./sw-cms/public/ public/
 
-COPY ./extensions/ extensions/
+COPY ./sw-cms/extensions/ extensions/
 
-COPY ./components/ components/
+COPY ./sw-cms/components/ components/
 
-COPY ./api/ api/
+COPY ./sw-cms/api/ api/
 
-COPY ./config/ config/
+COPY ./sw-cms/config/ config/
 
 
 RUN yarn build

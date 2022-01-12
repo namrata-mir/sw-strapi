@@ -4,6 +4,7 @@ services:
   strapi:
     build: .
     container_name: sw-strapi
+    restart: unless-stopped
     env_file: ./.env
     environment:
       NODE_ENV: ${NODE_ENV}
@@ -23,7 +24,7 @@ services:
     networks:
       - strapi-app-network
     ports:
-      - "27017:27017"
+      - "27018:27017"
 networks:
   strapi-app-network:
     driver: bridge
