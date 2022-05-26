@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campaigns",
+  "info": {
+    "name": "Campaign"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Header": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    }
+  }
+}
